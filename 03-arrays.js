@@ -102,3 +102,12 @@ arreglo dos, filter los los impares , sumar + 2
 
 }
 */
+
+var arregloReduce = [2,1,11,3,45]
+var valorSumaArreglo = arregloReduce
+.reduce(
+    (acumulador, item, indice, arreglo) => {
+        return acumulador + item
+    }, 0
+)
+console.log(valorSumaArreglo);
