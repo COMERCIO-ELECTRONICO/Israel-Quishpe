@@ -37,7 +37,7 @@ console.warn()
 */
 
 var json2 = {
-    nombre: 'kevin',
+    nombre: 'israel',
     edad: 25,
     soltero: true,
     fecha: new Date('1995/02/24'),
