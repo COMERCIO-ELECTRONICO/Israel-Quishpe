@@ -1,0 +1,18 @@
+<h1>Componente Hijo</h1>
+<div class="row formulario">
+  <div class="col-sm-5"></div>
+  <div class="col-sm-2">
+    <div class="form-group">
+      <label for="">Por favor ingrese el año de su nacimiento</label>
+      <input type="text" class="form-control" [(ngModel)]="iAnio" maxlength="4">
+      {{iAnio}}<br>
+      <label for="">Su edad es:</label>
+      <output type="text" value="{{edad}}" class="form-control"></output>
+      <app-hijo
+      [vanio]="iAnio">
+      </app-hijo>
+    </div>
+  </div>
+</div>
+
+
