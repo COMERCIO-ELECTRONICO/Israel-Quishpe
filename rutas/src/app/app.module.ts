@@ -1,3 +1,4 @@
+import { PokemonModule } from './pokemon/pokemon.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -15,7 +16,8 @@ import { AppRoutesComponent } from './app.routes';
   ],
   imports: [
     BrowserModule,
-    AppRoutesComponent
+    AppRoutesComponent,
+    PokemonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
