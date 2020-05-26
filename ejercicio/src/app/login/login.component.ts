@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/Router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,19 +8,26 @@ import { Router } from '@angular/Router';
 })
 export class LoginComponent implements OnInit {
   // credenciales
-
-  correo = '';
+  email = '';
   pass = '';
-  seleccionadoValor;
-
+  correo = '';
   valorAutocomplete = '';
   arregloResultado = [];
-  sugerencias = ['Estudiante', 'Profesor'];
+  sugerencias = ['kevin', 'cachetes', 'orlando'];
+  valorSeleecionado;
+
   constructor(
     private readonly _router: Router,
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+
+
+  seteoValorSeleccionado(eventoSeleecionado) {
+    console.log(eventoSeleecionado);
+    this.valorSeleecionado = eventoSeleecionado;
+  }
+
 
   buscarSugerencia(evento) {
     console.log(evento.query);
@@ -32,40 +40,27 @@ export class LoginComponent implements OnInit {
       this.sugerencias = this.arregloResultado;
     } else {
       this.sugerencias = ['Estudiante', 'Profesor'];
-    }
-    /*this.sugerencias
-
-    = ['hola'];*/
-  }
-
-  valorSeleccionado(evento) {
-    console.log(evento);
-    this.seleccionadoValor = evento;
-  }
-
+    }}
   ingresar() {
     console.log(this.valorAutocomplete);
-
-    if (this.pass === '1122') {
-      alert(this.correo);
-      if (this.seleccionadoValor === 'Estudiante') {
+    if (this.pass === '1234') {
+      alert(this.email);
+      if (this.valorSeleecionado === 'Estudiante') {
         alert('es estudiante');
         this._router.navigate(
-          ['/estudiante','perfil']
+          ['/estudiante', 'perfil']
+        )
+        // localhost:9000/estudiante/perfil
+      }
+    } else if
+      (this.pass === '3344') {
+      alert(this.email);
+      if (this.valorSeleecionado === 'Profesor') {
+        alert('Es Profesor');
+        this._router.navigate(
+          ['/profesor', 'perfil']
         )
       }
-    } else if 
-       (this.pass === '3344') {
-        alert(this.correo);
-        if (this.seleccionadoValor === 'Profesor') {
-          alert('Es Profesor');
-          this._router.navigate(
-            ['/profesor','perfil']
-          )
-        }
-      } else {
-        alert('no ingreso');
-      }
-    }
-  }
-  
+    } else {
+      alert('no ingreso');
+    }}}
