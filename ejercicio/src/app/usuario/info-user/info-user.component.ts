@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/Router';
 
 @Component({
   selector: 'app-info-user',
@@ -7,8 +7,8 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./info-user.component.css'],
 })
 export class InfoUserComponent implements OnInit {
-  constructor()
-  {} //public  ruta: ActivatedRoute
+  constructor(private readonly _activatedRoute: ActivatedRoute)
+  {} 
   nombre1 = '';
   nombre2 = '';
   apellido1 = '';
@@ -19,9 +19,9 @@ export class InfoUserComponent implements OnInit {
   confimarPassword = '';
 
   ngOnInit(): void {
-    /* this._activatedRoute.paramMap.subscribe((resultadoParametros) => {
+     this._activatedRoute.paramMap.subscribe((resultadoParametros) => {
       console.log(resultadoParametros);
-    });*/
+    });
   }
 
   crearOEditar() {
