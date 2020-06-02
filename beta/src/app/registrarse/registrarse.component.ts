@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/Router';
 
 @Component({
-  selector: 'app-info-user',
-  templateUrl: './info-user.component.html',
-  styleUrls: ['./info-user.component.css'],
+  selector: 'app-registrarse',
+  templateUrl: './registrarse.component.html',
+  styleUrls: ['./registrarse.component.css']
 })
-export class InfoUserComponent implements OnInit {
+export class RegistrarseComponent implements OnInit {
+
   constructor(
     private readonly _activatedRoute: ActivatedRoute
     ) {} //public  ruta: ActivatedRoute
@@ -33,4 +34,5 @@ export class InfoUserComponent implements OnInit {
     } else {
       alert('Contraseñas no validas');
     }
-  }}
+  }
+}

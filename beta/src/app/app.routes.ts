@@ -1,3 +1,5 @@
+//import { ProductoComponent } from './producto/producto.component';
+import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/Router';
 import { HomeComponent } from './home/home.component';
@@ -19,14 +21,25 @@ const rutas: Routes = [
     path: 'estudiante/perfil',
     component: PerfilUsuarioComponent,
   },
+ {
+    path: 'home/registrarse',
+    component: RegistrarseComponent,
+  },
+
   {
     path: 'usuario',
     loadChildren: () =>
       import('./usuario/usuario.module')
       .then(mod => mod.UsuarioModule),
   },
+  /*{
+    path: 'producto',
+    loadChildren: () =>
+      import('./producto/producto.module')
+      .then(mod => mod.ProductoModule),
+  },*/
   {
-    path: 'login',
+    path: 'home/login',
     component: LoginComponent,
   },
   {

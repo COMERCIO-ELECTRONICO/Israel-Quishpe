@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   valorAutocomplete = '';
   arregloResultado = [];
-  sugerencias = ['kevin', 'cachetes', 'orlando'];
+  sugerencias = ['kevin', 'cliente', 'orlando'];
 
 
   valorSeleecionado;
@@ -39,23 +39,6 @@ export class LoginComponent implements OnInit {
     this.valorSeleecionado = eventoSeleecionado;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   buscarSugerencia(evento) {
     console.log(evento.query);
     if (evento.query !== '') {
@@ -66,7 +49,7 @@ export class LoginComponent implements OnInit {
       this.arregloResultado.push(valorEncontrado);
       this.sugerencias = this.arregloResultado;
     } else {
-      this.sugerencias = ['kevin', 'cachetes', 'orlando'];
+      this.sugerencias = ['kevin', 'cliente', 'orlando'];
     }
   }
 
@@ -76,15 +59,14 @@ export class LoginComponent implements OnInit {
     console.log(this.valorAutocomplete);
     if (this.pass === '1234') {
       alert(this.email);
-      if (this.valorSeleecionado === 'kevin') {
-        alert('es estudiante');
+      if (this.valorSeleecionado === 'cliente') {
+        alert('BIENVENIDO CLIENTE');
 
 
 
         this._router.navigate(
-            ['/estudiante','perfil']
+            ['cliente','producto']
             )
-            // localhost:9000/estudiante/perfil
       }
     } else {
       alert('no ingreso');
