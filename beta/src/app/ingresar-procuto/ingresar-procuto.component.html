@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport"
+    content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+</head>
+<body>
+   
+  <form class="formulario">
+    <h1>Ingrese los datos del Producto</h1>
+    <div class="contenedor">
+      <div class="input-contenedor">
+        <i class="fas fa-user icon"></i>
+        <input type="text" 
+        required placeholder="codigo" 
+        name="codigo"
+        [(ngModel)]="codigo"
+        >
+      </div>
+      <!--///////////////////////////////nombre///////////////////////////////////////////-->
+      <div class="input-contenedor">
+        <i class="fas fa-envelope icon"></i>
+        <input type="text" 
+        required
+        placeholder="nombre"
+        name="nombre" 
+        [(ngModel)]="nombre"
+        >
+      </div>
+<!--/////////////////////////////// precio_venta///////////////////////////////////////////-->
+<div class="input-contenedor">
+  <i class="fas fa-envelope icon"></i>
+  <input 
+  type="text" 
+  required 
+  placeholder=" precio_venta" 
+  name="precio_venta" 
+  [(ngModel)]=" precio_venta"
+ >
+</div>
+<!--///////////////////////////////stock///////////////////////////////////////////-->
+<div class="input-contenedor">
+  <i class="fas fa-envelope icon"></i>
+  <input 
+  type="text" 
+  required 
+  placeholder="stock" 
+  name="stock" 
+  [(ngModel)]="stock"
+ >
+</div>
+<!--///////////////////////////////descripcion///////////////////////////////////////////-->
+<div class="input-contenedor">
+  <i class="fas fa-envelope icon"></i>
+  <input 
+  type="text" 
+  required 
+  placeholder="descripcion"
+  name="descripcion" 
+  [(ngModel)]="descripcion"
+ >
+</div>
+<!--/////////////////////////////// imagen///////////////////////////////////////////-->
+<div class="input-contenedor">
+  <i class="fas fa-envelope icon"></i>
+  <input 
+  type="text" 
+  required 
+  placeholder=" imagen" 
+  name=" imagen" 
+  [(ngModel)]=" imagen"
+ >
+</div>
+
+       <!--//////////////////////////////BOTONES///////////////////////////////////////////-->
+       <button class="
+       btn
+       btn-outline-success
+       btn-block" [disabled]="imagen===''" (click)="ingresar()" type="reset" 
+       style="border: none;
+       width: 100%;
+       color: white;
+       font-size: 20px;
+       background: #1a2537;
+       padding: 15px 20px;
+       border-radius: 5px;
+       cursor: pointer;">
+       Crear Producto
+     </button>
+      <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+      <p>¿Ya tienes una cuenta?<a class="link" href="login/producto">Volver a Productos</a></p>
+    </div>
+  </form>
+</body>
+</html>
+
+

@@ -1,141 +1,198 @@
-<div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <form class="example-form">
-          <mat-form-field
-          class="example-full-width">
-            <mat-label>Nombre de Cliente</mat-label>
-            <input
-            matInput
-            required
-            placeholder="Juan Montalvo"
-            name="nombre1"
-            [(ngModel)]="nombre1"
-            >
-          </mat-form-field>
-        </form>
-      </div>
-      <div class="col-sm-6">
-        <form class="example-form">
-          <mat-form-field
-          class="example-full-width">
-            <mat-label>Tipo de Documento</mat-label>
-            
-            <input
-            matInput
-            required
-            placeholder="xxx@xxx.com"
-            name="nombre2"
-            [(ngModel)]="nombre2"
-            >
-          </mat-form-field>
-        </form>
-      </div>
-      <div class="col-sm-6">
-        <form class="example-form">
-          <mat-form-field
-          class="example-full-width">
-            <mat-label>Apellido 1</mat-label>
-            <input
-            matInput
-            required
-            placeholder="xxx@xxx.com"
-            name="apellido1"
-            [(ngModel)]="apellido1"
-            >
-          </mat-form-field>
-        </form>
-      </div>
-      <div class="col-sm-6">
-        <form class="example-form">
-          <mat-form-field
-          class="example-full-width">
-            <mat-label>Apellido 2</mat-label>
-            <input
-            matInput
-            required
-            placeholder="xxx@xxx.com"
-            name="apellido2"
-            [(ngModel)]="apellido2"
-            >
-          </mat-form-field>
-        </form>
-      </div>
-      <div class="col-sm-6">
-        <form class="example-form">
-          <mat-form-field
-          class="example-full-width">
-            <mat-label>Correo</mat-label>
-            <input
-            matInput
-            required
-            placeholder="xxx@xxx.com"
-            name="email"
-            [(ngModel)]="email"
-            >
-          </mat-form-field>
-        </form>
-      </div>
-      <div class="col-sm-6">
-        <form class="example-form">
-          <mat-form-field
-          class="example-full-width">
-            <mat-label>Tlf</mat-label>
-            <input
-            matInput
-            required
-            placeholder="xxx@xxx.com"
-            name="telefono"
-            [(ngModel)]="telefono"
-            >
-          </mat-form-field>
-        </form>
-      </div>
-      <div class="col-sm-6">
-        <form class="example-form">
-          <mat-form-field
-          class="example-full-width">
-            <mat-label>Pass</mat-label>
-            <input
-            type="password"
-            matInput
-            required
-            placeholder="xxx@xxx.com"
-            name="pass"
-            [(ngModel)]="pass"
-            >
-          </mat-form-field>
-        </form>
-      </div>
-      <div class="col-sm-6">
-        <form class="example-form">
-          <mat-form-field
-          class="example-full-width">
-            <mat-label>Conf pass</mat-label>
-            <input
-            type="password"
-            matInput
-            required
-            placeholder="xxx@xxx.com"
-            name="confimarPassword"
-            [(ngModel)]="confimarPassword"
-            >
-          </mat-form-field>
-        </form>
-      </div>
-      </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <button class="
-        btn
-        btn-outline-success
-        btn-block"
-        (click)="crearOEditar()"
-        [disabled]="confimarPassword===''"
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport"
+    content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+</head>
+<body>
+  
+  <form class="formulario">
+    <h1>Completa tus Datos</h1>
+    <div class="contenedor">
+      <div class="input-contenedor">
+        <i class="fas fa-user icon"></i>
+        <input type="text" 
+        required placeholder="Nombre" 
+        name="nombre" 
+        [(ngModel)]="nombre"
         >
-          Crear/editar
-        </button>
       </div>
+      <!--///////////////////////////////TIPO DE DOCUMENTO///////////////////////////////////////////-->
+      <div class="input-contenedor">
+        <i class="fas fa-envelope icon"></i>
+        <input type="text" 
+        required
+        placeholder="Ruc o Cedula"
+        name="tipo_documento" 
+        [(ngModel)]="tipo_documento"
+        >
+      </div>
+<!--///////////////////////////////NUMERO DE DOCUMENTO///////////////////////////////////////////-->
+<div class="input-contenedor">
+  <i class="fas fa-envelope icon"></i>
+  <input 
+  type="text" 
+  required 
+  placeholder="Numero de Documento" 
+  name="num_documento" 
+  [(ngModel)]="num_documento"
+ >
+</div>
+<!--///////////////////////////////DIRECCION///////////////////////////////////////////-->
+<div class="input-contenedor">
+  <i class="fas fa-envelope icon"></i>
+  <input 
+  type="text" 
+  required 
+  placeholder="Ciudad" 
+  name="direccion" 
+  [(ngModel)]="direccion"
+ >
+</div>
+<!--///////////////////////////////TELEFONO///////////////////////////////////////////-->
+<div class="input-contenedor">
+  <i class="fas fa-envelope icon"></i>
+  <input 
+  type="text" 
+  required 
+  placeholder="Telefono" 
+  name="telefono" 
+  [(ngModel)]="telefono"
+ >
+</div>
+
+      <!--///////////////////////////////CORREO ELECTRONICO///////////////////////////////////////////-->
+      <div class="input-contenedor">
+        <i class="fas fa-envelope icon"></i>
+        <input type="text" 
+        required 
+        placeholder="Correo Electronico" 
+        name="email"
+         [(ngModel)]="email">
+      </div>
+ <!--///////////////////////////////CONTRASENIA///////////////////////////////////////////-->
+      <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+        <input type="password" 
+        required placeholder="Contraseña" 
+        name="pass" 
+        [(ngModel)]="pass">
+      </div>
+      <!--///////////////////////////////CONFIRMAR CONTRASENIA///////////////////////////////////////////-->
+      <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+        <input type="password" 
+        required
+        placeholder="Repetir Contraseña" 
+        name="confimarPassword"
+        [(ngModel)]="confimarPassword"
+        >
+      </div>
+       <!--//////////////////////////////BOTONES///////////////////////////////////////////-->
+       <button class="
+       btn
+       btn-outline-success
+       btn-block" [disabled]="confimarPassword===''" [routerLink]="['/informacion-cliente']" (click)="ingresar()"
+       style="border: none;
+       width: 100%;
+       color: white;
+       font-size: 20px;
+       background: #1a2537;
+       padding: 15px 20px;
+       border-radius: 5px;
+       cursor: pointer;">
+       Crear Cuenta
+     </button>
+      <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+      <p>¿Ya tienes una cuenta?<a class="link" href="home/login">Iniciar Sesion</a></p>
+    </div>
+  </form>
+</body>
+</html>
+
+
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre de Cliente</mat-label>
+          <input matInput required placeholder="Juan Montalvo" name="nombre" [(ngModel)]="nombre">
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Tipo de Documento</mat-label>
+
+          <input matInput required placeholder="RUC o Cédula" name="tipo_documento" [(ngModel)]="tipo_documento">
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Numero documento</mat-label>
+          <input matInput required placeholder="1722222222" name="num_documento" [(ngModel)]="num_documento">
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>direccion</mat-label>
+          <input matInput required placeholder="Barrio donde vivi" name="direccion" [(ngModel)]="direccion">
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>telefono</mat-label>
+          <input matInput required placeholder="0999969899" name="telefono" [(ngModel)]="telefono">
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>email</mat-label>
+          <input matInput required placeholder="xxx@xxx.com" name="email" [(ngModel)]="email">
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Pass</mat-label>
+          <input type="password" matInput required placeholder="" name="pass" [(ngModel)]="pass">
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Confirmar pass</mat-label>
+          <input type="password" matInput required placeholder="" name="confimarPassword"
+            [(ngModel)]="confimarPassword">
+        </mat-form-field>
+      </form>
     </div>
   </div>
-  
+  <div class="row">
+    <div class="col-sm-12">
+      <button class="
+        btn
+        btn-outline-success
+        btn-block" [disabled]="confimarPassword===''" [routerLink]="['/login','producto']" (click)="ingresar()">
+        Crear
+      </button>
+    </div>
+  </div>
+</div>
+-->

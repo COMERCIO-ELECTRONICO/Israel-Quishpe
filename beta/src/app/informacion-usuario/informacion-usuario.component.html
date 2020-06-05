@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport"
+    content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+</head>
+<body>
+  
+  <form class="formulario">
+    <h1>Completa tus Datos</h1>
+    <div class="contenedor">
+      <div class="input-contenedor">
+        <i class="fas fa-user icon"></i>
+        <input type="text" 
+        required placeholder="Nombre" 
+        name="nombre" 
+        [(ngModel)]="nombre"
+        >
+      </div>
+      <!--///////////////////////////////TIPO DE DOCUMENTO///////////////////////////////////////////-->
+      <div class="input-contenedor">
+        <i class="fas fa-envelope icon"></i>
+        
+        <input type="text" 
+        required
+        placeholder="Ruc o Cedula"
+        name="tipo_documento" 
+        [(ngModel)]="tipo_documento"
+        >
+      </div>
+<!--///////////////////////////////NUMERO DE DOCUMENTO///////////////////////////////////////////-->
+<div class="input-contenedor">
+  <i class="fas fa-envelope icon"></i>
+  <input 
+  type="text" 
+  required 
+  placeholder="Numero de Documento" 
+  name="num_documento" 
+  [(ngModel)]="num_documento"
+ >
+</div>
+<!--///////////////////////////////DIRECCION///////////////////////////////////////////-->
+<div class="input-contenedor">
+  <i class="fas fa-envelope icon"></i>
+  <input 
+  type="text" 
+  required 
+  placeholder="Ciudad" 
+  name="direccion" 
+  [(ngModel)]="direccion"
+ >
+</div>
+<!--///////////////////////////////TELEFONO///////////////////////////////////////////-->
+<div class="input-contenedor">
+  <i class="fas fa-envelope icon"></i>
+  <input 
+  type="text" 
+  required 
+  placeholder="Telefono" 
+  name="telefono" 
+  [(ngModel)]="telefono"
+ >
+</div>
+
+      <!--///////////////////////////////CORREO ELECTRONICO///////////////////////////////////////////-->
+      <div class="input-contenedor">
+        <i class="fas fa-envelope icon"></i>
+        <input type="text" 
+        required 
+        placeholder="Correo Electronico" 
+        name="email"
+         [(ngModel)]="email">
+      </div>
+ <!--///////////////////////////////CONTRASENIA///////////////////////////////////////////-->
+      <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+        <input type="password" 
+        required placeholder="Contraseña" 
+        name="pass" 
+        [(ngModel)]="pass">
+      </div>
+      <!--///////////////////////////////CONFIRMAR CONTRASENIA///////////////////////////////////////////-->
+      <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+        <input type="password" 
+        required
+        placeholder="Repetir Contraseña" 
+        name="confimarPassword"
+        [(ngModel)]="confimarPassword"
+        >
+      </div>
+       <!--//////////////////////////////BOTONES///////////////////////////////////////////-->
+       <button class="
+       btn
+       btn-outline-success
+       btn-block"  [routerLink]="['/login','producto']" 
+       style="border: none;
+       width: 100%;
+       color: white;
+       font-size: 20px;
+       background: #1a2537;
+       padding: 15px 20px;
+       border-radius: 5px;
+       cursor: pointer;">
+       Ir a Productos
+     </button>
+      
+     <button class="
+       btn
+       btn-outline-success
+       btn-block"  [routerLink]="['/informacion-cliente']" (click)="editar()"
+       style="border: none;
+       width: 100%;
+       color: white;
+       font-size: 20px;
+       background: #1a2537;
+       padding: 15px 20px;
+       border-radius: 5px;
+       cursor: pointer;">
+      Editar mi perfil
+     </button>
+     
+    </div>
+  </form>
+</body>
+</html>
+
+
