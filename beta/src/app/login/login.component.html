@@ -1,56 +1,60 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+ 
+
+</head>  
+<body>
+ <form class="formulario">
+    
+    <h1>Registrate</h1>
+     <div class="contenedor">
+     
+     <div class="input-contenedor">
+         <i class="fas fa-user icon"></i>
+         <input type="text" required placeholder="xxx@xxx.com" name="email" [(ngModel)]="email">
+         
+         </div>
+         
+         <div class="input-contenedor">
+         <i class="fas fa-envelope icon"></i>
+         <input type="password" matInput required name="pass" [(ngModel)]="pass" placeholder="****">
+         </div>
+         
+         <input type="submit" value="Registrate" class="button" (click)="ingresar()">
+         <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+         <p>¿Ya tienes una cuenta?<a class="link" href="home/registrarse">Iniciar Sesion</a></p>
+     </div>
+    </form>
+</body>
+</html>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+<!--
 <div class="container">
   <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4">
-      <p-autoComplete
-        [(ngModel)]="valorAutocomplete"
-        [suggestions]="sugerencias"
-        (completeMethod)="buscarSugerencia($event)"
-        [dropdown]="true"
-        (onSelect)="seteoValorSeleccionado($event)"
-        >
+      <p-autoComplete [(ngModel)]="valorAutocomplete" [suggestions]="sugerencias"
+        (completeMethod)="buscarSugerencia($event)" [dropdown]="true" (onSelect)="seteoValorSeleccionado($event)">
       </p-autoComplete>
 
       <form class="example-form">
-        <mat-form-field
-        class="example-full-width">
+        <mat-form-field class="example-full-width">
           <mat-label>Correo</mat-label>
-          <input
-          matInput
-          required
-          placeholder="xxx@xxx.com"
-          name="email"
-          [(ngModel)]="email"
-          >
+          <input matInput required placeholder="xxx@xxx.com" name="email" [(ngModel)]="email">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
           <mat-label>Contraseña</mat-label>
-          <input
-          type="password"
-          matInput
-          required
-          name="pass"
-          [(ngModel)]="pass"
-          placeholder="****">
+          <input type="password" matInput required name="pass" [(ngModel)]="pass" placeholder="****">
         </mat-form-field>
       </form>
     </div>
@@ -58,14 +62,11 @@
   </div>
   <div class="row">
     <div class="col-sm-6">
-      <button class="btn btn-outline-success btn-block"  (click)="ingresar()">
+      <button class="btn btn-outline-success btn-block" (click)="ingresar()">
+
         Ingresar
       </button>
     </div>
-    <div class="col-sm-6">
-      <button class="btn btn-outline-success btn-block">
-        Crear
-      </button>
-    </div>
+
   </div>
-</div>
+</div>--->

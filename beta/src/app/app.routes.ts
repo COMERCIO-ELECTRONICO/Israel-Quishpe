@@ -1,12 +1,14 @@
-//import { ProductoComponent } from './producto/producto.component';
+import { ProductoComponent } from './producto/producto.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/Router';
+import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
 import { LoginComponent } from './login/login.component';
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
+import { IngresarProcutoComponent } from './ingresar-procuto/ingresar-procuto.component';
+import { InformacionUsuarioComponent } from './informacion-usuario/informacion-usuario.component';
 
 const rutas: Routes = [
   {
@@ -21,16 +23,28 @@ const rutas: Routes = [
     path: 'estudiante/perfil',
     component: PerfilUsuarioComponent,
   },
- {
+  {
     path: 'home/registrarse',
     component: RegistrarseComponent,
   },
-
+  {
+    path: 'login/producto',
+    component: ProductoComponent,
+  },
+  {
+    path: 'ingresar-producto',
+    component: IngresarProcutoComponent,
+  },
+  {
+    path: 'informacion-cliente',
+    component: InformacionUsuarioComponent,
+  },
+ 
   {
     path: 'usuario',
     loadChildren: () =>
       import('./usuario/usuario.module')
-      .then(mod => mod.UsuarioModule),
+        .then(mod => mod.UsuarioModule),
   },
   /*{
     path: 'producto',
@@ -58,4 +72,4 @@ const rutas: Routes = [
   providers: [],
   exports: [RouterModule],
 })
-export class AppRoutes {}
+export class AppRoutes { }

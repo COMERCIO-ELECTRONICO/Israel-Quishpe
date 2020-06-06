@@ -1,3 +1,8 @@
+import { EditarService } from './services/editarUsuario.service';
+import { IngresarProductoService } from './services/ingresarProducto.service';
+import { RegistrarseService } from './services/registrarse.service';
+import { LoginService } from './services/login.service';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,6 +21,9 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
 import { UsuarioModule } from './usuario/usuario.module';
 import { CommonModule } from '@angular/common';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
+import { ProductoComponent } from './producto/producto.component';
+import { IngresarProcutoComponent } from './ingresar-procuto/ingresar-procuto.component';
+import { InformacionUsuarioComponent } from './informacion-usuario/informacion-usuario.component';
 
 
 @NgModule({
@@ -27,6 +35,10 @@ import { RegistrarseComponent } from './registrarse/registrarse.component';
     LoginComponent,
     PerfilUsuarioComponent,
     RegistrarseComponent,
+    ProductoComponent,
+    IngresarProcutoComponent,
+    InformacionUsuarioComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -38,9 +50,14 @@ import { RegistrarseComponent } from './registrarse/registrarse.component';
     AutoCompleteModule,
     UsuarioModule,
     CommonModule,
-    //ProductoModule
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    LoginService,
+    RegistrarseService,
+    IngresarProductoService,
+    EditarService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

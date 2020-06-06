@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   email = '';
   pass = '';
   correo = '';
-  valorAutocomplete = '';
+  valorAutocomplete   = '';
   arregloResultado = [];
   sugerencias = ['kevin', 'cachetes', 'orlando'];
   valorSeleecionado;

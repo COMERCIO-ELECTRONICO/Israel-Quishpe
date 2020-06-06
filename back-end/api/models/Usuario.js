@@ -6,21 +6,41 @@
  */
 
 module.exports = {
+attributes:{
 
-  attributes: {
-    nombre: {
-      type: 'string',
-      required: true
-    },
-    correo: {
-      type: 'string'
-    },
-    edad: {
-      type: 'number'
-    },
-    esCasado: {
-      type: 'boolean'
-    }
+nombre:{
+  type: 'string'
+},
+tipo_documento:{
+  type: 'string'
+},
+num_documento:{
+type: 'string'
+},
+direccion:{
+  type: 'string'
+},
+telefono:{
+  type: 'string'
+},
+email:{
+  type: 'string'
+},
+clave: {
+  type: 'string'
+},
+ingreso: {
+  collection: 'Ingreso',
+  via: 'idusuario'
+},
+vetas: {
+  collection : 'venta',
+  via: 'idventaUsu'
+},
+idusu: {
+model: 'rol'
+}
+
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
