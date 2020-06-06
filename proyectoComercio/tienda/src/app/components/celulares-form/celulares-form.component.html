@@ -1,0 +1,35 @@
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+      <div class="card-body">
+        <form action="">
+          <div class="form-group">
+            <input type="text" name="title" [(ngModel)]="celular.title" placeholder="Title" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <textarea name="description" [(ngModel)]="celular.description" rows="2" placeholder="Description" class="form-control"></textarea>
+          </div>
+          <div class="form-group">
+            <input type="url" name="image URL" [(ngModel)]="celular.image" placeholder="Image" class="form-control">
+          </div>
+          <div class="form-group">
+            <textarea name="stock" [(ngModel)]="celular.stock" rows="2" placeholder="Stock" class="form-control"></textarea>
+          </div>
+          <div class="form-group">
+            <textarea name="precio" [(ngModel)]="celular.precio" rows="2" placeholder="Precio" class="form-control"></textarea>
+          </div>
+          <button class="btn btn-success btn-block" (click)="editar ? updateCelular() : saveNewCelular()">
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="card card-body text-center">
+    <img [src]="celular.image == '' ? '/assets/noimage.png' : celular.image" alt="No Image" class="card-img-top">
+      <h3>{{celular.id}}. {{celular.title == '' ? 'Celular Title' : celular.title}}</h3>
+      <p>{{celular.description == '' ? 'Write your Descrition' : celular.description}}</p>
+      <p>{{celular.created_at | date: 'yyyy-MM-dd'}}</p>
+    </div>
+  </div>
