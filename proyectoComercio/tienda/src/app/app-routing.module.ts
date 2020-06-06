@@ -34,11 +34,6 @@ const routes: Routes = [
     path: 'usuarios/editar/:id',
     component: UsuarioFormComponent
   },
-  /*{
-    path: '',
-    redirectTo: '/celulares',
-    pathMatch: 'full'
-  },*/
   {
     path: 'home/admin/celulares',
     component: CelularesListComponent
